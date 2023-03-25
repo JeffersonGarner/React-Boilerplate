@@ -1,0 +1,38 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite && pnpm watch:all",
+    "test": "vitest --ui",
+    "test:watch": "vitest --watch",
+    "types:watch": "tsc --w --noEmit",
+    "test:coverage": "vitest run --coverage",
+    "watch:all": "concurrently -n \"TypeScript, Tests\" -c \"cyan.bgBlack, yellow.bgBlack\" \"pnpm types:watch\" \"pnpm run test:watch\" "
+  },
+  "keywords": [],
+  "author": "Jeff Garner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JeffersonGarner/React-Boilerplate/issues"
+  },
+  "homepage": "https://github.com/JeffersonGarner/React-Boilerplate#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.7"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "vite": "^4.2.1"
+  }
+}
