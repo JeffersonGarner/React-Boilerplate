@@ -8,6 +8,7 @@ const eslintConfig = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'react-app',
+        'plugin:sonarjs/recommended'
     ],
     overrides: [
         {
@@ -32,7 +33,8 @@ const eslintConfig = {
         'react-hooks',
         '@typescript-eslint',
         'sort-keys-fix',
-        'sort-imports-es6-autofix'
+        'sort-imports-es6-autofix',
+        'sonarjs'
     ],
     rules: {
         '@typescript-eslint/indent': 'error',
@@ -55,10 +57,6 @@ const eslintConfig = {
             } 
         ],
         'indent': 'off',
-        'jsx-quotes': [
-            2,
-            'prefer-single'
-        ],
         'keyword-spacing': [
             'error',
             {
@@ -70,6 +68,11 @@ const eslintConfig = {
                     'while': { 'after': false }
                 } 
             }
+        ],
+        'no-multi-spaces': 2,
+        'no-multiple-empty-lines': [
+            'error',
+            { 'max': 1 }
         ],
         'no-unused-vars': [
             'error',
@@ -108,6 +111,10 @@ const eslintConfig = {
             'error',
             { 'allowAllPropertiesOnSameLine': false } 
         ],
+        'quotes': [
+            2,
+            'single'
+        ],
         'react-hooks/exhaustive-deps': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react/jsx-uses-react': 'off',
@@ -116,6 +123,13 @@ const eslintConfig = {
         semi: [
             2,
             'never' 
+        ],
+        'sonarjs/cognitive-complexity': 'error',
+        'sonarjs/no-all-duplicated-branches': 'error',
+        'sonarjs/no-gratuitous-expressions': 'error',
+        'sonarjs/no-identical-functions': [
+            'error',
+            3
         ],
         'sort-imports-es6-autofix/sort-imports-es6': [
             2,

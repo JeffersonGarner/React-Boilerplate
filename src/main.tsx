@@ -2,10 +2,10 @@ import App from './App'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-const container = document.getElementById('root')
+const containerElement = document.getElementById('root')
 
-if(container) {
-    const reactRoot = ReactDOM.createRoot(container)
+if(containerElement) {
+    const reactRoot = ReactDOM.createRoot(containerElement)
 
     reactRoot.render(
         <React.StrictMode>
