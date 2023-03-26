@@ -1,9 +1,5 @@
-const App = (): JSX.Element => {
-    return (
-        <div>
-            <h1>Hello! Welcome to the boilerplate!</h1>
-        </div>
-    )
-}
+import { Header } from './components/typography/Header/Header'
+
+const App = (): JSX.Element => <Header>Hello! Welcome to the boilerplate!</Header>
 
 export default App
