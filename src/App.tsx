@@ -1,14 +1,3 @@
-import React from 'react'
-
-const a = [
-    'asdfasdasdas', 
-    'asdfasdasdas',
-    'asdfasdasdas',
-    'asdfasdasdas',
-    'asdfasdasdas',
-    'asdfasdasdas'
-]
-
 function App(): JSX.Element {
     return (
         <div>

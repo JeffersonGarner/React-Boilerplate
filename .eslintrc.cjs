@@ -42,7 +42,9 @@ const eslintConfig = {
         'array-bracket-newline': ['error', 'consistent'],
         semi: [2, 'never'],
         "indent": "off",
-        "@typescript-eslint/indent": "error"
+        "@typescript-eslint/indent": "error",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off"
     },
     parser: '@typescript-eslint/parser',
     overrides: [
