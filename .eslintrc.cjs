@@ -108,6 +108,18 @@ const eslintConfig = {
             'error',
             'never' 
         ],
+        'keyword-spacing': [
+            'error',
+            {
+                'overrides': {
+                    'if': { 'after': false },
+                    'for': { 'after': false },
+                    'while': { 'after': false },
+                    'static': { 'after': false },
+                    'as': { 'after': false }
+                } 
+            }
+        ]
     },
     parser: '@typescript-eslint/parser',
     overrides: [
@@ -116,12 +128,10 @@ const eslintConfig = {
                 '*.ts',
                 '*.tsx' 
             ],
-
             extends: [
                 'plugin:@typescript-eslint/recommended',
                 'plugin:@typescript-eslint/recommended-requiring-type-checking',
             ],
-
             parserOptions: { project: [ './tsconfig.json' ], },
         },
     ],
