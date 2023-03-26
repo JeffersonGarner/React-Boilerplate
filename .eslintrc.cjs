@@ -20,7 +20,11 @@ const eslintConfig = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
+    plugins: [
+        'react',
+        'react-hooks',
+        '@typescript-eslint' 
+    ],
     rules: {
         'no-unused-vars': [
             'error',
@@ -38,27 +42,87 @@ const eslintConfig = {
                 asyncArrow: 'never',
             },
         ],
-        'array-element-newline': ['error', 'consistent'],
-        'array-bracket-newline': ['error', 'consistent'],
-        semi: [2, 'never'],
-        "indent": "off",
-        "@typescript-eslint/indent": "error",
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off"
+        'array-element-newline': [
+            'error',
+            {
+                'multiline': true,
+                'minItems': 2 
+            } 
+        ],
+        'array-bracket-newline': [
+            'error',
+            {
+                'multiline': true,
+                'minItems': 2 
+            } 
+        ],
+        'object-property-newline': [
+            'error',
+            { 'allowAllPropertiesOnSameLine': false } 
+        ],
+        'object-curly-newline': [
+            'error',
+            {
+                'ObjectExpression': {
+                    'multiline': true,
+                    'minProperties': 3 
+                },
+                'ObjectPattern': {
+                    'multiline': true,
+                    'minProperties': 3 
+                },
+                'ImportDeclaration': {
+                    'multiline': true,
+                    'minProperties': 3 
+                },
+                'ExportDeclaration': {
+                    'multiline': true,
+                    'minProperties': 3 
+                }
+            }
+        ],
+        semi: [
+            2,
+            'never' 
+        ],
+        'indent': 'off',
+        'quotes': [
+            'error',
+            'single' 
+        ],
+        '@typescript-eslint/indent': 'error',
+        'react/jsx-uses-react': 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
+        'react/prop-types': 2,
+        'object-curly-spacing': [
+            'error',
+            'always' 
+        ],
+        'array-bracket-spacing': [
+            'error',
+            'always' 
+        ],
+        'space-in-parens': [
+            'error',
+            'never' 
+        ],
     },
     parser: '@typescript-eslint/parser',
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: [
+                '*.ts',
+                '*.tsx' 
+            ],
 
             extends: [
                 'plugin:@typescript-eslint/recommended',
                 'plugin:@typescript-eslint/recommended-requiring-type-checking',
             ],
 
-            parserOptions: {
-                project: ['./tsconfig.json'],
-            },
+            parserOptions: { project: [ './tsconfig.json' ], },
         },
     ],
 }
