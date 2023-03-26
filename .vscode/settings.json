@@ -1,2 +1,9 @@
 {
+	// saving and save actions
+	"files.autoSave": "onFocusChange",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.formatOnSave": true,
+	"editor.tabSize": 4,
 }
