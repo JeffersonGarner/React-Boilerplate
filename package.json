@@ -1,14 +1,4 @@
 {
-    "name": "react-boilerplate",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview",
-        "watch:types": "tsc --watch --noEmit"
-    },
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
@@ -30,7 +20,19 @@
         "eslint-plugin-promise": "^6.1.1",
         "eslint-plugin-react": "^7.32.2",
         "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+        "eslint-plugin-sort-keys-fix": "^1.1.2",
         "typescript": "^4.9.5",
         "vite": "^4.2.1"
-    }
+    },
+    "name": "react-boilerplate",
+    "private": true,
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "vite",
+        "preview": "vite preview",
+        "watch:types": "tsc --watch --noEmit"
+    },
+    "type": "module",
+    "version": "0.0.0"
 }
