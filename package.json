@@ -10,11 +10,14 @@
         "@babel/core": "^7.21.3",
         "@babel/plugin-syntax-flow": "^7.18.6",
         "@babel/plugin-transform-react-jsx": "^7.21.0",
+        "@testing-library/react": "^14.0.0",
         "@types/react": "^18.0.29",
         "@types/react-dom": "^18.0.11",
         "@typescript-eslint/eslint-plugin": "^5.56.0",
         "@typescript-eslint/parser": "^5.56.0",
+        "@vitejs/plugin-react": "^3.1.0",
         "@vitejs/plugin-react-swc": "^3.2.0",
+        "concurrently": "^7.6.0",
         "eslint": "^8.36.0",
         "eslint-config-react-app": "^7.0.1",
         "eslint-config-standard-with-typescript": "^34.0.1",
@@ -26,8 +29,10 @@
         "eslint-plugin-sonarjs": "^0.19.0",
         "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
         "eslint-plugin-sort-keys-fix": "^1.1.2",
+        "jsdom": "^21.1.1",
         "typescript": "^4.9.5",
-        "vite": "^4.2.1"
+        "vite": "^4.2.1",
+        "vitest": "^0.29.7"
     },
     "name": "react-boilerplate",
     "private": true,
@@ -36,9 +41,12 @@
     },
     "scripts": {
         "build": "tsc && vite build",
-        "dev": "vite",
+        "coverage": "vitest run --coverage",
+        "dev": "vite --open",
         "preview": "vite preview",
-        "watch:types": "tsc --watch --noEmit"
+        "test": "vitest",
+        "watch": "tsc --watch --noEmit",
+        "dev:watch": "concurrently -n \"Vite Runtime,Typescript  ,Tests       \" -c \"yellow.bgBlack,cyan.bgBlack,green.bgBlack\" \"pnpm dev\" \"pnpm watch\" \"pnpm test\""
     },
     "type": "module",
     "version": "0.0.0"
